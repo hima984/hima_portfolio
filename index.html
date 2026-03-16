@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Pixel Font but clean mapping to our modern vibe -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Hima | Minecraft Dark Mode Portfolio</title>
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div id="preloader" class="preloader">
+    <div class="mojang-logo">HIMA<span style="color:var(--accent-cyan);">CRAFT</span></div>
+    <div class="loading-bar-container">
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+
+  <!-- THEME TOGGLE -->
+  <div class="mc-switch-container" id="theme-btn" title="Toggle Daytime/Nighttime">
+    <div class="mc-switch">
+      <div class="mc-switch-handle"></div>
+    </div>
+  </div>
+
+  <!-- Modern Background -->
+  <div class="bg-gradient"></div>
+  <div class="bg-mesh"></div>
+  
+  <!-- Dark Vignette Overlay -->
+  <div class="bg-overlay" id="bg-overlay"></div>
+
+  <!-- MAIN MENU SCREEN -->
+  <div class="mc-screen" id="main-menu" style="display: flex;">
+    <div class="mc-logo">Himacraft<br><span style="font-size: 32px; color: var(--accent-cyan); text-shadow: 0 0 10px var(--accent-cyan);">Cyberpunk Edition</span></div>
+    
+    <div class="btn-group">
+      <div class="mc-btn glow-border" data-target="about-screen">Singleplayer (About)</div>
+      <div class="mc-btn glow-border" data-target="projects-screen">Multiplayer (Quests)</div>
+      
+      <div class="row-buttons">
+        <div class="mc-btn glow-border" data-target="skills-screen" style="flex: 2;">Options... (Skills)</div>
+        <div class="mc-btn glow-border" data-target="contact-screen" style="flex: 1;">Quit (Contact)</div>
+      </div>
+    </div>
+    
+    <!-- 3D Component resting behind modern UI -->
+    <div class="character-overlay">
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.28/build/spline-viewer.js"></script>
+      <spline-viewer url="https://prod.spline.design/SbrLHuQIPzcis9VE/scene.splinecode"></spline-viewer>
+    </div>
+  </div>
+
+  <!-- ABOUT SCREEN -->
+  <div class="mc-screen" id="about-screen">
+    <h1 class="mc-title screen-header">About Me</h1>
+    <div class="mc-panel pixel-card" style="display: flex; gap: 30px; align-items: start;">
+      <img src="./image/2.jpeg" class="pixel-avatar glow-border" alt="Avatar">
+      <div class="about-text">
+        <h2 class="about-name" style="text-align: left;">Hima - UI/UX Designer</h2>
+        <p class="text-gray">I turn user problems into pixel-perfect solutions — blending empathy, research, and creative flows to build interfaces that feel effortless and delightful.</p>
+        <p class="text-gray mt-2">From wireframes to high-fidelity prototypes, let's craft something epic together. ⛏️✨</p>
+        <div class="mt-3 stats-box">
+             <p><span style="color:var(--accent-cyan)">Level:</span> UI/UX Crafter</p>
+             <p><span style="color:var(--accent-magenta)">Biome:</span> Creative Mode</p>
+        </div>
+      </div>
+    </div>
+    <div class="screen-footer">
+      <div class="mc-btn glow-border" data-target="main-menu">Done</div>
+    </div>
+  </div>
+
+  <!-- PROJECTS SCREEN (WORLD SELECTION) -->
+  <div class="mc-screen" id="projects-screen">
+    <h1 class="mc-title screen-header">Select Quest</h1>
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-box">
+        <div style="position:relative;">
+          <iframe src="https://www.behance.net/embed/project/242859295?ilo0=1" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+          <div class="iframe-overlay"></div>
+        </div>
+        <div class="mt-3">
+          <h3 class="text-gradient" style="font-size: 22px;">Fintech Flow Optimizer</h3>
+          <p class="text-gray mt-2" style="font-size: 16px;">[Survival Mode • v1.20]</p>
+        </div>
+      </div>
+      
+      <!-- Project 2 -->
+      <div class="project-box">
+        <div style="position:relative;">
+          <iframe src="https://www.behance.net/embed/project/245458581?ilo0=1" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+          <div class="iframe-overlay"></div>
+        </div>
+        <div class="mt-3">
+          <h3 class="text-gradient" style="font-size: 22px;">Mobile App Redesign</h3>
+          <p class="text-gray mt-2" style="font-size: 16px;">[Creative Mode • v1.19]</p>
+        </div>
+      </div>
+      
+      <!-- Project 3 -->
+      <div class="project-box">
+        <div style="position:relative;">
+          <iframe src="https://www.behance.net/embed/project/245473783?ilo0=1" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+          <div class="iframe-overlay"></div>
+        </div>
+        <div class="mt-3">
+          <h3 class="text-gradient" style="font-size: 22px;">E-Commerce Dashboard</h3>
+          <p class="text-gray mt-2" style="font-size: 16px;">[Hardcore Mode • v1.18]</p>
+        </div>
+      </div>
+      
+      <!-- Project 4 -->
+      <div class="project-box">
+        <div style="position:relative;">
+          <iframe src="https://www.behance.net/embed/project/245476291?ilo0=1" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+          <div class="iframe-overlay"></div>
+        </div>
+        <div class="mt-3">
+          <h3 class="text-gradient" style="font-size: 22px;">Accessible Portal</h3>
+          <p class="text-gray mt-2" style="font-size: 16px;">[Adventure Mode • v1.20]</p>
+        </div>
+      </div>
+    </div>
+    <div class="screen-footer">
+      <div class="mc-btn glow-border" data-target="main-menu">Cancel</div>
+    </div>
+  </div>
+
+  <!-- SKILLS SCREEN (INVENTORY) -->
+  <div class="mc-screen" id="skills-screen">
+    <h1 class="mc-title screen-header">Inventory</h1>
+    
+    <div class="inventory-container pixel-card">
+        <!-- Main Inventory 9x3 -->
+        <div class="inventory-grid">
+          <div class="inv-slot" title="Figma">FIGMA</div>
+          <div class="inv-slot" title="UI Design">UI/UX</div>
+          <div class="inv-slot" title="UX Research">RESRH</div>
+          <div class="inv-slot" title="Prototyping">PROTO</div>
+          <div class="inv-slot" title="User Testing">TEST</div>
+          <div class="inv-slot" title="Wireframing">WIRE</div>
+          <div class="inv-slot" title="HTML/CSS">CODE</div>
+          <div class="inv-slot" title="JavaScript">JS</div>
+          <div class="inv-slot" title="Bootstrap">BOOTS</div>
+          
+          <div class="inv-slot" title="Accessibility">A11Y</div>
+          <div class="inv-slot" title="Motion Design">MOTN</div>
+          <div class="inv-slot" title="Adobe XD">ADOBE</div>
+          <div class="inv-slot empty"></div><div class="inv-slot empty"></div><div class="inv-slot empty"></div>
+          <div class="inv-slot empty"></div><div class="inv-slot empty"></div><div class="inv-slot empty"></div>
+          
+          <div class="inv-slot empty"></div><div class="inv-slot empty"></div><div class="inv-slot empty"></div>
+          <div class="inv-slot empty"></div><div class="inv-slot empty"></div><div class="inv-slot empty"></div>
+          <div class="inv-slot empty"></div><div class="inv-slot empty"></div><div class="inv-slot empty"></div>
+        </div>
+        
+        <!-- Hotbar separator -->
+        <div class="inventory-divider"></div>
+        
+        <!-- Hotbar 9x1 -->
+        <div class="inventory-hotbar">
+          <div class="inv-slot empty"></div>
+          <div class="inv-slot empty"></div>
+          <div class="inv-slot empty"></div>
+          <div class="inv-slot empty"></div>
+          <div class="inv-slot empty"></div>
+          <div class="inv-slot empty"></div>
+          <div class="inv-slot empty"></div>
+          <div class="inv-slot empty"></div>
+          <div class="inv-slot empty"></div>
+        </div>
+    </div>
+
+    <div class="screen-footer">
+      <div class="mc-btn glow-border" data-target="main-menu">Done</div>
+    </div>
+  </div>
+
+  <!-- CONTACT SCREEN (SEND MESSAGE) -->
+  <div class="mc-screen" id="contact-screen">
+    <h1 class="mc-title screen-header">Direct Connect</h1>
+    <div class="mc-panel pixel-card" style="width: 500px;">
+      <h2 style="font-size: 28px; margin-bottom: 24px; color: #fff;">Server Address (Email)</h2>
+      
+      <label class="mc-label">Email Handle</label>
+      <input type="text" class="mc-input glow-input" value="traveler@example.com">
+      
+      <label class="mc-label">Comms</label>
+      <textarea class="mc-input glow-input" style="height: 100px; resize: none;">Let's build together!</textarea>
+      
+      <div class="contact-details mt-3 text-gray">
+        <p><i class="bi bi-envelope"></i> himapraveenapulletikurthi@gmail.com</p>
+        <p><i class="bi bi-discord"></i> hima_dev#1234</p>
+      </div>
+      
+      <div class="btn-group" style="width: 100%; margin-top: 20px;">
+        <div class="mc-btn glow-border" style="text-align: center;">Join Server</div>
+      </div>
+    </div>
+    
+    <div class="screen-footer">
+      <div class="mc-btn glow-border" data-target="main-menu">Cancel</div>
+    </div>
+  </div>
+
+  <script>
+    // Screen management SPA logic
+    const screens = {
+      'main-menu': document.getElementById('main-menu'),
+      'about-screen': document.getElementById('about-screen'),
+      'projects-screen': document.getElementById('projects-screen'),
+      'skills-screen': document.getElementById('skills-screen'),
+      'contact-screen': document.getElementById('contact-screen')
+    };
+
+    const bgOverlay = document.getElementById('bg-overlay');
+
+    function showScreen(screenId) {
+      // Hide all screens
+      for (const key in screens) {
+        if (screens[key]) {
+          screens[key].classList.remove('active');
+          // Wait for fade out, then hide
+          setTimeout(() => {
+            if(screens[key].id !== screenId) screens[key].style.display = 'none';
+          }, 200);
+        }
+      }
+
+      // Show target screen
+      if (screens[screenId]) {
+        setTimeout(() => {
+          screens[screenId].style.display = 'flex';
+          // Small timeout for CSS transition
+          setTimeout(() => {
+            screens[screenId].classList.add('active');
+          }, 50);
+        }, 200);
+      }
+
+      // Manage backdrop: heavier vignette on submenus, lighter on main menu
+      if (screenId === 'main-menu') {
+        bgOverlay.classList.remove('active');
+      } else {
+        bgOverlay.classList.add('active');
+      }
+    }
+
+    // Attach button events
+    document.querySelectorAll('.mc-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const target = e.target.getAttribute('data-target');
+        if (target) showScreen(target);
+      });
+    });
+
+    // Preloader Logic
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+        setTimeout(() => {
+          preloader.style.display = 'none';
+          // Initialize Menu after preloader
+          screens['main-menu'].classList.add('active');
+        }, 500); // Wait for CSS transition
+      }, 2000); // Simulate 2s load time
+    });
+
+    // Theme Toggle Logic
+    const themeBtn = document.getElementById('theme-btn');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'light') {
+      document.body.classList.add('light-theme');
+      themeBtn.classList.add('active');
+    }
+
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      themeBtn.classList.toggle('active');
+      
+      let theme = 'dark';
+      if (document.body.classList.contains('light-theme')) {
+        theme = 'light';
+      }
+      localStorage.setItem('theme', theme);
+    });
+  </script>
+</body>
+</html>
