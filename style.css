@@ -210,6 +210,11 @@ h1.mc-title {
 /* =========================================
    ABOUT (SINGLEPLAYER)
 ========================================= */
+.about-panel {
+  display: flex;
+  gap: 30px;
+  align-items: start;
+}
 .pixel-avatar {
   width: 180px; height: 180px;
   border: 4px solid #000;
@@ -321,6 +326,10 @@ h1.mc-title {
 /* =========================================
    CONTACT
 ========================================= */
+.contact-panel {
+  width: 500px;
+  max-width: 100%;
+}
 .mc-label {
   display: block;
   font-size: 22px;
@@ -577,4 +586,99 @@ body.light-theme .inv-slot {
 }
 .preloader{
 
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  .btn-group {
+    width: 90vw;
+  }
+  .row-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .mc-btn {
+    font-size: 20px;
+    padding: 12px;
+  }
+  .mc-logo {
+    font-size: 32px;
+  }
+  .mc-logo span {
+    font-size: 24px !important;
+  }
+  /* Hide 3D component on mobile to save performance and space */
+  .character-overlay {
+    display: none;
+  }
+  .mc-switch-container {
+    top: 10px; right: 10px;
+    min-width: unset;
+    padding: 6px 10px;
+  }
+  
+  /* About Screen */
+  .about-panel {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90vw;
+    padding: 20px;
+  }
+  .about-name {
+    text-align: center !important;
+    font-size: 24px;
+  }
+  
+  /* Projects Screen */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    width: 90vw;
+    gap: 15px;
+    padding: 5px;
+  }
+  .project-box iframe {
+    height: 200px;
+  }
+  
+  /* Skills Screen */
+  .inventory-container {
+    width: 96vw;
+    padding: 10px;
+    gap: 10px;
+  }
+  .inventory-grid, .inventory-hotbar {
+    grid-template-columns: repeat(9, 9.5vw);
+    gap: 0.5vw;
+    justify-content: center;
+  }
+  .inv-slot {
+    width: 9.5vw;
+    height: 9.5vw;
+    font-size: 10px;
+    padding: 2px;
+    word-break: break-all;
+  }
+  
+  /* Contact Screen */
+  .contact-panel {
+    width: 90vw;
+    padding: 20px;
+  }
+  .mc-input {
+    font-size: 18px;
+  }
+  
+  /* Preloader */
+  .mojang-logo {
+    font-size: 30px;
+  }
+  .loading-bar-container {
+    width: 80vw;
+  }
 }
