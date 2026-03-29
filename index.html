@@ -38,6 +38,7 @@
 
   <!-- MAIN MENU SCREEN -->
   <div class="mc-screen" id="main-menu" style="display: flex;">
+    
     <div class="mc-logo">Himacraft<br><span style="font-size: 32px; color: var(--accent-cyan); text-shadow: 0 0 10px var(--accent-cyan);">Cyberpunk Edition</span></div>
     
     <div class="btn-group">
@@ -45,6 +46,19 @@
       <div class="mc-btn glow-border" data-target="projects-screen">Multiplayer (Quests)</div>
       
       <div class="row-buttons">
+        <!-- Social Button Container -->
+        <div class="mc-social-container">
+          <div class="mc-social-menu">
+            <a href="https://github.com/" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://behance.net/" target="_blank" title="Behance"><i class="bi bi-behance"></i></a>
+            <a href="https://twitter.com/" target="_blank" title="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+          </div>
+          <div class="mc-btn glow-border mc-social-icon-btn" title="Social Links">
+            <i class="bi bi-globe"></i>
+          </div>
+        </div>
+        
         <div class="mc-btn glow-border" data-target="skills-screen" style="flex: 2;">Options... (Skills)</div>
         <div class="mc-btn glow-border" data-target="contact-screen" style="flex: 1;">Quit (Contact)</div>
       </div>
@@ -188,7 +202,7 @@
   <div class="mc-screen" id="contact-screen">
     <h1 class="mc-title screen-header">Direct Connect</h1>
     <div class="mc-panel pixel-card contact-panel">
-      <h2 style="font-size: 28px; margin-bottom: 24px; color: #fff;">Server Address (Email)</h2>
+      <h2 style="font-size: 28px; margin-bottom: 24px; color: #05cde8;">Server Address (Email)</h2>
       
       <label class="mc-label">Email Handle</label>
       <input type="text" class="mc-input glow-input" value="traveler@example.com">

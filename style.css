@@ -162,6 +162,69 @@ body {
 }
 
 /* =========================================
+   SOCIAL BUTTON (BOTTOM LEFT)
+========================================= */
+.mc-social-container {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  z-index: 100;
+}
+
+.mc-social-icon-btn {
+  width: 60px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.mc-social-menu {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 15px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 4px solid #000;
+  box-shadow: inset 4px 4px 0px 0px var(--mc-border-light), inset -4px -4px 0px 0px var(--mc-border-dark);
+  padding: 15px 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(20px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+}
+
+/* Hover creates the dropdown effect */
+.mc-social-container:hover .mc-social-menu,
+.mc-social-container:focus-within .mc-social-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.mc-social-menu a {
+  color: var(--text-main);
+  font-size: 26px;
+  text-decoration: none;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+}
+
+.mc-social-menu a:hover {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 15px var(--accent-cyan);
+  transform: scale(1.2);
+}
+
+/* =========================================
    SCREENS BASE
 ========================================= */
 .mc-screen {
@@ -184,9 +247,9 @@ body {
   text-align: center;
 }
 .screen-footer {
-  position: absolute;
-  bottom: 40px;
+  margin-top: 30px;
   width: 420px;
+  max-width: 90vw;
 }
 
 /* Typography */
@@ -584,9 +647,6 @@ body.light-theme .inv-slot {
   color: #111;
   font-weight: bold;
 }
-.preloader{
-
-}
 
 /* =========================================
    MOBILE RESPONSIVENESS
@@ -599,8 +659,17 @@ body.light-theme .inv-slot {
     width: 90vw;
   }
   .row-buttons {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 56px 1fr;
     gap: 16px;
+  }
+  .row-buttons > div[data-target="skills-screen"] {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  .row-buttons > div[data-target="contact-screen"] {
+    grid-column: 2;
+    grid-row: 2;
   }
   .mc-btn {
     font-size: 20px;
@@ -680,5 +749,22 @@ body.light-theme .inv-slot {
   }
   .loading-bar-container {
     width: 80vw;
+  }
+  
+  /* Social Button Mobile */
+  .mc-social-container {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .mc-social-icon-btn {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+  }
+  .mc-social-menu a {
+    font-size: 20px;
   }
 }
